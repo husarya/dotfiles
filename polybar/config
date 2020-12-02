@@ -23,7 +23,7 @@
 ;C O L O R S
 ;==========================================================
 [colors]
-background = #000000
+background = #bb000000
 background-alt = #444
 foreground = #dfdfdf
 foreground-alt = #555
@@ -156,32 +156,44 @@ wrapping-scroll = true
 ;pin-workspaces = true
 
 label-mode-padding = 1
-label-mode-foreground = #000
+;label-mode-foreground = #000
+label-mode-foreground = #820055
 label-mode-background = ${colors.primary}
 
 ; focused = Active workspace on focused monitor
-label-focused = %index%
+;label-focused = %index%
+label-focused = 
 ;label-focused-background = ${colors.background}
 ;label-focused-underline= ${colors.primary}
 label-focused-padding = 1
 
-#label-focused-background = #ad00a5
-#label-focused-underline = #ad00a5
-label-focused-background = #820055
-label-focused-underline = #820055
+;#label-focused-background = #ad00a5
+;#label-focused-underline = #ad00a5
+#label-focused-background = #000
+#label-focused-underline = #000
+label-focused-background = #bb000000
+;label-focused-underline = #00
+label-focused-foreground = #820055
 ; unfocused = Inactive workspace on any monitor
-label-unfocused = %index%
+label-unfocused = 
+;label-unfocused = %index%
 label-unfocused-padding = 1
+;label-unfocused-foreground = #1f1e1e
+label-unfocused-foreground = #000000
 
 ; visible = Active workspace on unfocused monitor
-label-visible = %index%
+label-visible = 
+;label-visible = %index%
 label-visible-background = ${self.label-focused-background}
-label-visible-underline = ${self.label-focused-underline}
+;label-visible-underline = ${self.label-focused-underline}
 label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Workspace with urgency hint set
-label-urgent = %index%
-label-urgent-background = ${colors.alert}
+label-urgent = 
+;label-urgent = %index%
+label-urgent-background = #00
+label-urgent-foreground = ${colors.alert}
+;label-urgent-background = ${colors.alert}
 label-urgent-padding = 1
 
 ; Separator in between workspaces
@@ -218,7 +230,7 @@ type = internal/temperature
 thermal-zone = 0
 warn-temperature = 70
 
-hwmon-path = /sys/class/hwmon/hwmon0/temp1_input
+hwmon-path = /sys/class/hwmon/hwmon1/temp1_input
 
 format = <label>
 ;format-underline = #f50a4d
